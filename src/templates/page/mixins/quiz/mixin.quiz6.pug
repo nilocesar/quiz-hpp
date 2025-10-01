@@ -3,21 +3,22 @@ mixin quiz6(indice)
     .titleBloc.up
       .number.zoomIn 
         +image('questao06n.svg', '')
-      .titleD Além do tratamento médico, qual apoio é recomendado para pacientes com HPP?
+      .titleD A Hipofosfatasia (HPP) pode comprometer as atividades da vida diária?
     .blocBase
       .bloc.down.delay2
         .it(it=1, res=0 )
           .sel
-          .text Tomar antibióticos regularmente
+          .text Não, a HPP não afeta as atividades do dia a dia dos pacientes.
         .it(it=2, res=0 )
           .sel
-          .text Manter uma dieta rica em açúcar
+          .text Apenas crianças com HPP apresentam dificuldades funcionais.
         .it(it=3, res=0 )
           .sel
-          .text Evitar qualquer tipo de exercício físico
+          .text O impacto da HPP se restringe apenas a fraturas ósseas, sem influência em atividades diárias.
         .it(it=4, res=1 )
           .sel
-          .text Participar de grupos de apoio e acompanhamento psicológico
+          .text Sim. Adultos e crianças com HPP podem apresentar diminuição da capacidade de caminhar, velocidade de marcha lenta e dificuldade de se levantar repetidamente de uma posição sentada, o que pode comprometer atividades da vida diária.
+
 
     .boxBlack.up.delay6
       button.btnInit.cadastro.confirm
