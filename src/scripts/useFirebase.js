@@ -1,11 +1,10 @@
 window.firebaseConfig = {
-  apiKey: "AIzaSyCkQDk-WuixIbfy6Jo2ov2YyaJCqaT68u4",
-  authDomain: "astrazeneca-v1.firebaseapp.com",
-  projectId: "astrazeneca-v1",
-  storageBucket: "astrazeneca-v1.firebasestorage.app",
-  messagingSenderId: "877335724875",
-  appId: "1:877335724875:web:a40471cd5e082f2ba9dece",
-  measurementId: "G-30E4TTNSQZ",
+  apiKey: "AIzaSyDCWHDPHJzNm5IfRi34C2mh-HYh_r8_kX8",
+  authDomain: "astrazeneca-hpp.firebaseapp.com",
+  projectId: "astrazeneca-hpp",
+  storageBucket: "astrazeneca-hpp.firebasestorage.app",
+  messagingSenderId: "482866735777",
+  appId: "1:482866735777:web:dbecff22deb11aa9835ee0",
 };
 
 async function getDocumentsOrderedByField(collectionDB, fieldName) {
