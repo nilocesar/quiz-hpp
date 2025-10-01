@@ -1,0 +1,322 @@
+@import '../../less/includes/colors.less';
+@import '../../less/includes/fonts.less';
+
+.body {
+    background-color: @color-09;
+    position: relative;
+
+    .fundo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .logoX{
+            position: absolute;
+            width: 60rem;
+            object-fit: contain;
+            right: 5rem;
+            bottom: 5rem;
+        }
+
+        .barra {
+            position: absolute;
+            width: 4rem;
+            height: 100%;
+            background: linear-gradient(@color-01 0%, @color-05 100%);
+            z-index: 2;
+            top: 0;
+            border-right: 1rem solid @color-02;
+        }
+
+        .capa {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: myAnim 3s cubic-bezier(0, 0.55, 0.45, 1) 0s 1 normal forwards;
+        }
+
+        .title {
+            position: absolute;
+            width: 60rem;
+            object-fit: contain;
+            top: 10rem;
+            left: 15rem;
+        }
+
+        .foguete {
+            position: absolute;
+            width: 100rem;
+            height: 70rem;
+            animation: fogueteBase 2s cubic-bezier(0, 0.55, 0.45, 1) 3s 1 normal forwards;
+            opacity: 0;
+
+            @keyframes fogueteBase {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                    top: 205rem;
+                    left: -100rem;
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                    top: 110rem;
+                    left: -50rem;
+                }
+            }
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transform: translateY(0px);
+                animation: float 6s ease-in-out infinite;
+            }
+
+
+        }
+
+        .logo_simples {
+            position: absolute;
+            top: 5rem;
+            right: 5rem;
+            object-fit: contain;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    
+    .sec1 {
+        position: absolute;
+        z-index: 1;
+        top: 50rem;
+        left: 15rem;
+        width: 125rem;
+       
+
+        .form {
+            background-color: rgba(0, 54, 95, 0.9);
+            border-top-left-radius: 5rem;
+            border-top-right-radius: 5rem;
+            box-shadow: 0px 0px 27px 5px rgb(28, 28, 28);
+            display: flex;
+            flex-direction: column;
+            padding: 10em 6em;
+            position: relative;
+            width: 100%;
+            .input-wrapper {
+                position: relative;
+                label {
+                    p {
+                        font-size: 5em;
+                        margin: 0 0 .5em;
+                        color: @color-white;
+                        text-shadow: #000 1px 1px 1px;
+                    }
+                }
+                input {
+                    background-color: @color-white;
+                    width: -webkit-fill-available;
+                    border: none;
+                    font-size: 6em;
+                    padding: .5em;
+                    color: @color-10;
+                }
+                small {
+                    color: @color-03;
+                    font-size: 4.5em;
+                    margin: 0.5em 0 0 !important;
+                    position: absolute;
+                    text-align: right;
+                    width: 100%;
+                    display: none;
+                }
+            }
+
+            .input-wrapper + .input-wrapper {
+                margin: 6.5em 0 0;
+            }
+
+            .flex {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.6em;
+                margin: 10.4em 0 0;
+                .boxInput {
+                    border: solid .4rem @color-black !important;
+                    width: 2.5em;
+                    height: 2.5em;
+                    input[type="checkbox"] {
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                        border: none;
+                        border-radius: 0;
+                    }
+                    
+                    input[type="checkbox"]:hover,
+                    input[type="checkbox"]:checked {
+                        background-color: @color-01;
+                        border: none;
+                    }
+                    
+                    input[type="checkbox"] {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        border: none;
+                        border-radius: 0;
+                        padding: 0;
+                        display: inline-block;
+                        position: relative;
+                    }
+                    
+                    input[type="checkbox"]:hover::after,
+                    input[type="checkbox"]:checked::after {
+                        content: "";
+                        position: absolute;
+                        left: .6em;
+                        top: -0.2em;
+                        width: .9em;
+                        height: 1.8em;
+                        border: solid @color-white;
+                        border-width: 0 0.4em 0.4em 0;
+                        transform: rotate(45deg);
+                    }
+                }
+                p {
+                    width: auto;
+                    font-size: 1.8em;
+                    font-weight: 600;
+                    margin: 0;
+                    text-shadow: #000 1px 1px 1px;
+                }
+            }
+        }
+
+        .boxBlack {
+            background-color: rgba(0, 54, 95, 0.9);
+            border-bottom-left-radius: 5rem;
+            border-bottom-right-radius: 5rem;
+            box-shadow: 0px 0px 27px 5px rgb(28, 28, 28);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 2rem 10rem 2rem;
+            position: relative;
+            width: 133rem;
+            margin-top: 5rem;
+
+            .baseD{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5rem;
+                width: 100%;
+
+                img{
+                    position: relative;
+                    object-fit: contain;
+                    width: 30rem;
+                    height: 30rem;
+                }
+
+                h2{
+                    position: relative;
+                    font-size: 5.5rem;
+                    line-height: 1.2;
+                    width: 60rem;
+                    color: #fff;
+                    text-shadow: #000 1px 1px 1px;
+
+                }
+            }
+            
+            .btnInit {
+                position: relative;
+                width: 50rem;
+                padding: 4rem;
+                font-size: 8rem;
+                
+                background: linear-gradient(0deg, @color-02 0%, @color-04 100%);
+                box-shadow: 0 4px 15px 0 @color-03;
+                cursor: pointer;
+                z-index: 999;
+                background-size: 300% 100%;
+                border-radius: 6rem;
+                color: @color-white;
+                transition: all 0.4s ease-in-out;
+                // animation: float 10s ease-in-out infinite;
+                z-index: 1;
+
+                &:hover {
+                    transform: scale(1.02);
+                    background: linear-gradient(210deg, @color-02 100%, @color-04 100%);
+                }
+
+                p {
+                    z-index: 5;
+                    padding: 0;
+                    margin: 0;
+                    position: relative;
+                    text-shadow: #000 1px 1px 1px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background: linear-gradient(280deg, @color-04 0%, @color-02 100%);
+                    border-radius: 6rem;
+                    transform: scale(0.95, 0.8);
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                }
+
+                &:hover {
+                    background-position: 100% 0;
+                    transition: all .4s ease-in-out;
+                }
+            }
+        }
+    }
+    
+}
+
+
+@keyframes myAnim {
+    0% {
+        transform: scale(4.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

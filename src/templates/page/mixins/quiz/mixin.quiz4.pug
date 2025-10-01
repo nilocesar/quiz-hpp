@@ -1,0 +1,27 @@
+mixin quiz4(indice)
+  section.sec4.question(question=indice)
+    .titleBloc.up
+      .number.zoomIn 
+        span 4
+      .titleD Quais são os produtos que lançaremos <br>em 2025?
+    .blocBase
+      .bloc.down.delay2
+        .it(it=1, res=0 )
+          .sel
+          .text Dato-Dxd, Truqap, Voydeya e Saphnelo
+        .it(it=2, res=1 )
+          .sel
+          .text Voydeya, Breztri,  Wainua e Dato-Dxd
+        .it(it=3, res=0 )
+          .sel
+          .text Voydeya, Breztri,  Wainua e Truqap
+        .it(it=4, res=0 )
+          .sel
+          .text Voydeya, Breztri, Saphnelo <br>e Dato-Dxd
+
+    .boxBlack.up.delay3
+      button.btnInit.cadastro
+        p ENVIAR
+      
+    .foguete.foguete2
+      +image('foguete.png', 'fogueteImg')

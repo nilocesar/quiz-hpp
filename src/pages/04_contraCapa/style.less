@@ -1,0 +1,200 @@
+@import '../../less/includes/colors.less';
+@import '../../less/includes/fonts.less';
+
+.body {
+    background-color: @color-09;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .fundo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .logoX {
+            position: absolute;
+            width: 60rem;
+            object-fit: contain;
+            right: 5rem;
+            bottom: 5rem;
+        }
+
+        .barra {
+            position: absolute;
+            width: 4rem;
+            height: 100%;
+            background: linear-gradient(@color-01 0%, @color-05 100%);
+            z-index: 2;
+            top: 0;
+            border-right: 1rem solid @color-02;
+        }
+
+        .tile{
+            position: absolute;
+            width: 120rem;
+            top: 60rem;
+            left: 35rem;
+            color: #fff;
+
+            h2{
+                font-weight: bold;
+            }
+
+            h3{
+                font-weight: normal !important;
+                padding-left: 5rem;
+            }
+
+            font-size: 8rem;
+        }
+
+        .capa {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: myAnim 3s cubic-bezier(0, 0.55, 0.45, 1) 0s 1 normal forwards;
+        }
+
+        .title {
+            position: absolute;
+            width: 80rem;
+            object-fit: contain;
+            top: 15rem;
+            left: 44rem;
+        }
+
+        .foguete {
+            position: absolute;
+            width: 100rem;
+            height: 110rem;
+            top: 85rem;
+            left: 30rem;
+            animation: fogueteBase 2s cubic-bezier(0, 0.55, 0.45, 1) 1s 1 normal forwards;
+            opacity: 0;
+
+            @keyframes fogueteBase {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                    top: 205rem;
+                    left: -40rem;
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                    top: 125rem;
+                    left: -20rem;
+                }
+            }
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transform: translateY(0px);
+                animation: float 6s ease-in-out infinite;
+            }
+
+
+        }
+
+        .logo_simples {
+            position: absolute;
+            top: 5rem;
+            right: 5rem;
+            object-fit: contain;
+            width: 10rem;
+            height: 10rem;
+        }
+
+        .baseBtn {
+            position: absolute;
+            bottom: 45rem;
+            right: 25rem;
+        }
+
+
+        .btnCadastrar {
+            position: relative;
+            width: 50rem;
+            padding: 5rem;
+            font-size: 8rem;
+            border-radius: 10rem;
+            background: linear-gradient(0deg, @color-02 0%, @color-04 100%);
+            box-shadow: 0 4px 15px 0 @color-03;
+            cursor: pointer;
+            z-index: 999;
+            background-size: 300% 100%;
+            border-radius: 7rem;
+            color: @color-white;
+            transition: all 0.4s ease-in-out;
+            animation: float 10s ease-in-out infinite;
+            z-index: 1;
+
+            &:hover {
+                transform: scale(1.02);
+                background: linear-gradient(210deg, @color-02 100%, @color-04 100%);
+            }
+
+            p {
+                z-index: 5;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                text-shadow: #000 1px 1px 1px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                background: linear-gradient(280deg, @color-04 0%, @color-02 100%);
+                border-radius: 6rem;
+                transform: scale(0.95, 0.8);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+
+            &:hover {
+                background-position: 100% 0;
+                transition: all .4s ease-in-out;
+            }
+        }
+    }
+}
+
+
+@keyframes myAnim {
+    0% {
+        transform: scale(4.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

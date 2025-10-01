@@ -1,0 +1,27 @@
+mixin quiz3(indice)
+  section.sec3.question(question=indice)
+    .titleBloc.up
+      .number.zoomIn 
+        span 3
+      .titleD Quantos lançamentos a AstraZeneca Brasil planeja lançar até 2033?
+    .blocBase
+      .bloc.down.delay2
+        .it(it=1, res=0 )
+          .sel
+          .text 60 lançamentos, entre novos produtos <br>e indicações
+        .it(it=2, res=0 )
+          .sel
+          .text 78 lançamentos, entre novos produtos <br>e indicações
+        .it(it=3, res=0 )
+          .sel
+          .text 102 lançamentos, entre novos produtos <br>e indicações
+        .it(it=4, res=1 )
+          .sel
+          .text 126 lançamentos, entre novos produtos <br>e indicações
+
+    .boxBlack.up.delay3
+      button.btnInit.cadastro
+        p ENVIAR
+      
+    .foguete.foguete2
+      +image('foguete.png', 'fogueteImg')

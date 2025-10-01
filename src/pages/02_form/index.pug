@@ -1,0 +1,42 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+	link(rel="stylesheet", href="style.css")
+
+block body
+	.body.body01
+		+header()
+
+		.fundo
+			+image('capa.png', 'capa')
+			.barra.left.delay2
+			+image('title.svg', 'title down delay3')
+
+		
+			section.sec1
+				.form.up.delay4
+					.input-wrapper
+						label(for="nome") 
+							p NOME 
+						input#name(type="text")
+						small.alertName Preencha o nome. 
+					.input-wrapper
+						label(for="email") 
+							p E-MAIL CORPORATIVO 
+						input#email(type="mail")
+						small.alertEmail E-mail invalido.
+				.boxBlack.up.delay5
+					.baseD
+						+image('exclamacao.svg', 'exclamacao')
+						h2 PREPARE-SE PARA RESPONDER AS QUESTÕES NO MENOR TEMPO!
+
+					button.btnInit.cadastro
+						p INICIAR
+					
+				.foguete
+					+image('foguete.png', 'fogueteImg')
+
+			+image('logo.svg', 'logoX up delay6')
+		
+block scripts
+	script(src="script.js")

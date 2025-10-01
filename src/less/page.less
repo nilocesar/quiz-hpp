@@ -1,0 +1,341 @@
+@import 'includes/imports.less';
+
+/* less components */
+@import 'includes/component/guide.less';
+@import 'includes/component/accordeon.less';
+@import 'includes/component/quiz.less';
+@import 'includes/component/component.slider.less';
+@import 'includes/component/component.modal.less';
+@import 'includes/component/component.acessibilidade.less';
+@import 'includes/component/component.libras.less';
+@import 'includes/component/avatar.less';
+@import 'includes/component/equipamentos.less';
+@import 'includes/component/conquistas.less';
+@import 'includes/component/ballon.less';
+@import 'includes/component/instrucoes.less';
+@import 'includes/component/menuScreen.less';
+@import 'includes/exercise/exercise.pick-x.less';
+
+/* less template */
+@import 'includes/import-fonts.less';
+@import 'includes/spacers.less';
+@import 'includes/colors.less';
+@import 'includes/fonts.less';
+@import 'includes/buttons.less';
+@import 'includes/defaults.less';
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	// margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background-color: @color-black;
+}
+.body01 {
+    animation: bodyflicker01 infinite .3s;
+}
+.body02 {
+    animation: bodyflicker02 infinite .3s;
+}
+@keyframes bodyflicker01 {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow: 
+            0 0 0.1rem #fff,
+            // inset 0 0 0.2rem #fff, 
+            0 0 1rem @color-05, 
+            // inset 0 0 1rem @color-01, 
+            0 0 3rem @color-05, 
+            // inset 0 0 1rem @color-01;
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+@keyframes bodyflicker02 {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow: 
+            0 0 0.1rem #fff,
+            // inset 0 0 0.2rem #fff, 
+            0 0 1rem @color-02, 
+            // inset 0 0 1rem @color-02, 
+            0 0 3rem @color-02, 
+            // inset 0 0 1rem @color-02;
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    .fullscreen {
+        position: relative;
+        width: 10em;
+        top: 5rem;
+        right: 5rem;
+        img {
+            width: 100%;
+            filter: invert(100%) sepia(57%) saturate(0%) hue-rotate(253deg) brightness(106%) contrast(106%);
+        }
+    }
+}
+
+.boxTop {
+    height: 26em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../assets/img/topogame.jpg);
+    background-size: cover;
+    padding: 0 15em;
+    .top {
+        width: 100%;
+    }
+    .title {
+        color: @color-02;
+        font-size: 4.2em;
+        text-transform: uppercase;
+        width: min-content;
+        font-family: 'D3 Euronism' !important;
+        animation: flickerTimer 1.5s infinite alternate; 
+    }
+    .info {
+        font-family: 'D3 Euronism' !important;
+        width: 20em;
+        display: flex;
+        align-items: center;
+        video {
+            width: 5.5em;
+            margin: 0 1em 0 0;
+        }
+        .value {
+            // font-family: 'Tilt Neon';
+            font-size: 3.5em !important;
+            color: @color-white !important;
+            position: relative;
+            letter-spacing: 0.05em;
+            animation: flickerTimer 1.5s infinite alternate; 
+        }
+        @keyframes flickerTimer {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+              
+                text-shadow:
+                    0.1rem 0.1rem .5rem #fff, 
+                    0 0 1rem @color-01,
+                    -.05em -.05em 1rem @color-01;
+            }
+            
+            20%, 24%, 55% {        
+                text-shadow: none;
+                box-shadow: none;
+            }    
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: @color-black;
+    width: 100%;
+    height: 7.7em;
+    display: flex;
+    justify-content: flex-end;
+
+    &::before {
+        content: '';
+        width: 21.5em;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../assets/img/detal1.png);
+        background-size: 101%;
+        z-index: 1;
+    }
+    button {
+        background-color: @color-01;
+        width: 18.4em;
+        height: 100%;
+        p {
+            font-size: 3em;
+            margin: 0;
+            font-weight: 600;
+            color: @color-white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.textNeon {
+    font-family: 'D3 Euronism' !important;
+    animation: .3s textflicker infinite;
+}
+@keyframes textflicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            0.1rem 0.1rem .5rem #fff, 
+            0 0 1rem @color-01,
+            -.05em -.05em 1rem @color-01;
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+.btnNeon {
+    font-family: 'D3 Euronism' !important;
+    animation: flicker 3s infinite;
+    border: solid .4em @color-01;
+    padding: 2em;
+}
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            0.1rem 0.1rem .5rem #fff, 
+            0 0 1rem @color-01,
+            -.05em -.05em 1rem @color-01;
+        
+        box-shadow: 
+            0 0 0.1rem #fff,
+            inset 0 0 0.2rem #fff, 
+            0 0 1rem @color-01, 
+            inset 0 0 1rem @color-01, 
+            0 0 3rem @color-01, 
+            inset 0 0 1rem @color-01;
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+
+button {
+    cursor: pointer;
+}
+
+b, h2,h1, h3, h4 {
+    font-weight: 600 !important;
+}
+
+i {
+    font-weight: 500 !important;
+}
+
+p {
+	font-size: .9em;
+}
+
+ul {
+    padding: 0 0 0 1.5em;
+}
+
+.hide {
+	display: none !important;
+}
+
+.mr-full{
+    opacity: 0;
+    animation: go-back 1s forwards;
+    animation-delay: 0.2s;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+@keyframes go-back {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.rorate{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: @color-03;
+    z-index: 999999999;
+    display: none;
+
+    // @media screen and (orientation: landscape) {
+    //     display: flex;
+
+    // }
+
+    video{
+        position: relative;
+        width: 150rem;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+    }
+}

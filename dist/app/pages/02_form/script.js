@@ -1,0 +1,2 @@
+$(document).ready(function(){localStorage.getItem("game");$(".cadastro").on("click",function(){var a=$("#name").val(),e=$("#email").val();return $(".alertName").css("display","none"),$(".alertMail").css("display","none"),0==a.length?($(".alertName").css("display","block"),!1):0!=e.length&&/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(e)?(a={name:a,email:e,uid:Date.now()},$("body").trigger("setOrUpdateObject",["user",a]),void setTimeout(()=>{navigate.next()},120)):($(".alertEmail").css("display","block"),!1)})});
+//# sourceMappingURL=script.js.map

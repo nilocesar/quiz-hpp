@@ -1,0 +1,21 @@
+extends ../../templates/page/template.page-base-adaptativo.pug
+
+block styles
+	link(rel="stylesheet", href="style.css")
+
+block body
+	.body.body01
+		.fundo
+			+image('capa.png', 'capa')
+			.barra.left.delay2
+			+image('title.svg', 'title down delay3')
+			.foguete
+				+image('foguete.png', 'fogueteImg')
+			.baseBtn.zoomIn.delay4  
+				button.init.btnCadastrar
+					p CADASTRAR
+			+image('logo_simples.svg', 'logo_simples zoomIn delay7')
+		
+		
+block scripts
+	script(src="script.js")

@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["$","document","ready","on","navigate","goto"],"mappings":"AAAAA,EAAEC,QAAQ,EAAEC,MAAM,WAChBF,EAAE,OAAO,EAAEG,GAAG,QAAS,WACrBC,SAASC,KAAK,SAAS,CACzB,CAAC,CACH,CAAC","file":"script.js","sourcesContent":["$(document).ready(function () {\n  $(\".init\").on(\"click\", function () {\n    navigate.goto(`01_capa`);\n  });\n});\n"]}
