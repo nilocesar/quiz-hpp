@@ -8,19 +8,19 @@ block body
 		+header()
 		.fundo
 			+image('capa.png', 'capa')
-			.barra.left.delay2
-			+image('title.svg', 'title down delay3')
-			.foguete
-				+image('foguete.png', 'fogueteImg')
-			
-			.tile
-				h2.left.delay4 Obrigado pela participação!
-				h3.right.delay5 Em breve os vencedores <br>serão divulgados.
+			.titleBase.zoomIn.delay2  
+				.title
+					+image('title.svg', '')
 
-			.baseBtn.zoomIn.delay6  
-				button.init.btnCadastrar
-					p INÍCIO
-			+image('logo.svg', 'logoX up delay7')
+			
+			.tile.up.delay4  
+				.baseH
+					h2.left.delay4 Obrigado pela participação!
+					h3.right.delay5 Em breve os vencedores <br>serão divulgados.
+
+				.baseBtn.zoomIn.delay6  
+					button.init.btnCadastrar
+						+image('voltarBtn.svg', '')
 		
 		
 block scripts

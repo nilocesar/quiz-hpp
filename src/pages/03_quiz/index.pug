@@ -8,9 +8,16 @@ block body
 		+header()
 
 		.fundo
-			+image('capa.png', 'capa')
-			.barra.left.delay2
-			+image('title.svg', 'title down delay3')
+			+image('questao01.png', 'capa capa1')
+			+image('questao02.png', 'capa capa2')
+			+image('questao03.png', 'capa capa3')
+			+image('questao04.png', 'capa capa4')
+			+image('questao05.png', 'capa capa5')
+			+image('questao06.png', 'capa capa6')
+			
+			.titleBase.zoomIn.delay2  
+				.title
+					+image('title.svg', '')
 
 			#cronometro.timeQuiz.right.delay8 00:00:00
 
@@ -19,8 +26,8 @@ block body
 			+quiz3(3)
 			+quiz4(4)
 			+quiz5(5)
+			+quiz6(6)
 
-			+image('logo.svg', 'logoX up delay6')
 		
 block scripts
 	script(src="script.js")

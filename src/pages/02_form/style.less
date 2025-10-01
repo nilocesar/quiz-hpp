@@ -13,105 +13,75 @@
         height: 100%;
         overflow: hidden;
 
-        .logoX{
-            position: absolute;
-            width: 60rem;
-            object-fit: contain;
-            right: 5rem;
-            bottom: 5rem;
-        }
-
-        .barra {
-            position: absolute;
-            width: 4rem;
-            height: 100%;
-            background: linear-gradient(@color-01 0%, @color-05 100%);
-            z-index: 2;
-            top: 0;
-            border-right: 1rem solid @color-02;
-        }
-
         .capa {
             position: relative;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            animation: myAnim 3s cubic-bezier(0, 0.55, 0.45, 1) 0s 1 normal forwards;
+            animation: myAnim 13s cubic-bezier(0, 0.55, 0.45, 1) 0s 1 normal forwards;
         }
 
-        .title {
+        .titleBase {
             position: absolute;
-            width: 60rem;
-            object-fit: contain;
+            width: 45rem;
+            height: 30rem;
             top: 10rem;
-            left: 15rem;
-        }
+            left: 10rem;
 
-        .foguete {
-            position: absolute;
-            width: 100rem;
-            height: 70rem;
-            animation: fogueteBase 2s cubic-bezier(0, 0.55, 0.45, 1) 3s 1 normal forwards;
-            opacity: 0;
-
-            @keyframes fogueteBase {
-                0% {
-                    opacity: 0;
-                    transform: scale(0);
-                    top: 205rem;
-                    left: -100rem;
+            .title {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+            
+                    img {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        transform: translateY(0px);
+                        animation: float 6s ease-in-out infinite;
+                        filter: drop-shadow(29.58px 29.58px 35.94px rgba(82, 34, 93, 0.75));
+                    }
+            
+            
                 }
-
-                100% {
-                    opacity: 1;
-                    transform: scale(1);
-                    top: 110rem;
-                    left: -50rem;
-                }
-            }
-
-            img {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                transform: translateY(0px);
-                animation: float 6s ease-in-out infinite;
-            }
-
-
         }
 
-        .logo_simples {
-            position: absolute;
-            top: 5rem;
-            right: 5rem;
-            object-fit: contain;
-            width: 10rem;
-            height: 10rem;
-        }
+        
     }
     
     .sec1 {
         position: absolute;
         z-index: 1;
-        top: 50rem;
-        left: 15rem;
-        width: 125rem;
+        top: 100rem;
+        left: 10rem;
+        width: 183rem;
        
 
         .form {
-            background-color: rgba(0, 54, 95, 0.9);
-            border-top-left-radius: 5rem;
-            border-top-right-radius: 5rem;
-            box-shadow: 0px 0px 27px 5px rgb(28, 28, 28);
+           
+            
+            &::before{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(#841655 0%, #43387c 100%);
+                box-shadow: 0px 0px 27px 5px rgb(28, 28, 28);
+                opacity: 0.85;
+            }
+
             display: flex;
-            flex-direction: column;
-            padding: 10em 6em;
+            padding: 6em;
             position: relative;
             width: 100%;
+            justify-content: space-between;
+
             .input-wrapper {
                 position: relative;
+                width: 40%;
                 label {
                     p {
                         font-size: 5em;
@@ -124,14 +94,14 @@
                     background-color: @color-white;
                     width: -webkit-fill-available;
                     border: none;
-                    font-size: 6em;
+                    font-size: 4em;
                     padding: .5em;
-                    color: @color-10;
+                    color: @color-05;
                 }
                 small {
                     color: @color-03;
-                    font-size: 4.5em;
-                    margin: 0.5em 0 0 !important;
+                    font-size: 3em;
+                    margin: 0.2em 0 0 !important;
                     position: absolute;
                     text-align: right;
                     width: 100%;
@@ -140,7 +110,7 @@
             }
 
             .input-wrapper + .input-wrapper {
-                margin: 6.5em 0 0;
+                width: 55%;
             }
 
             .flex {
@@ -202,93 +172,62 @@
         }
 
         .boxBlack {
-            background-color: rgba(0, 54, 95, 0.9);
-            border-bottom-left-radius: 5rem;
-            border-bottom-right-radius: 5rem;
-            box-shadow: 0px 0px 27px 5px rgb(28, 28, 28);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 2rem 10rem 2rem;
-            position: relative;
-            width: 133rem;
-            margin-top: 5rem;
-
-            .baseD{
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5rem;
+            
+            &::before {
+                position: absolute;
+                content: '';
                 width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(#841655 0%, #43387c 100%);
+                box-shadow: 0px 0px 27px 5px rgb(28, 28, 28);
+                opacity: 0.85;
+            }
 
-                img{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 6rem;
+            position: relative;
+            width: 183rem;
+            margin-top: 2rem;
+
+            h2 {
+                position: relative;
+                font-size: 5.5rem;
+                line-height: 1.2;
+                width: 95rem;
+                color: #fff;
+                text-shadow: #000 1px 1px 1px;
+
+            }
+
+            .btnInit {
+                position: relative;
+                width: 45rem;
+                transition: all .2s ease-in-out;
+
+                img {
                     position: relative;
                     object-fit: contain;
-                    width: 30rem;
-                    height: 30rem;
+                    width: 100%;
+                    height: 100%;
+                    filter: drop-shadow(29.58px 29.58px 35.94px rgba(17, 1, 21, 0.75));
+                    transition: all .4s ease-in-out;
                 }
 
-                h2{
-                    position: relative;
-                    font-size: 5.5rem;
-                    line-height: 1.2;
-                    width: 60rem;
-                    color: #fff;
-                    text-shadow: #000 1px 1px 1px;
+                &:hover {
 
+                    transition: all .4s ease-in-out;
+
+                    img {
+                        transform: scale(1.1);
+                        transition: all .4s ease-in-out;
+                    }
                 }
             }
             
-            .btnInit {
-                position: relative;
-                width: 50rem;
-                padding: 4rem;
-                font-size: 8rem;
-                
-                background: linear-gradient(0deg, @color-02 0%, @color-04 100%);
-                box-shadow: 0 4px 15px 0 @color-03;
-                cursor: pointer;
-                z-index: 999;
-                background-size: 300% 100%;
-                border-radius: 6rem;
-                color: @color-white;
-                transition: all 0.4s ease-in-out;
-                // animation: float 10s ease-in-out infinite;
-                z-index: 1;
-
-                &:hover {
-                    transform: scale(1.02);
-                    background: linear-gradient(210deg, @color-02 100%, @color-04 100%);
-                }
-
-                p {
-                    z-index: 5;
-                    padding: 0;
-                    margin: 0;
-                    position: relative;
-                    text-shadow: #000 1px 1px 1px;
-                }
-
-                &::before {
-                    position: absolute;
-                    content: "";
-                    background: linear-gradient(280deg, @color-04 0%, @color-02 100%);
-                    border-radius: 6rem;
-                    transform: scale(0.95, 0.8);
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    z-index: 0;
-                }
-
-                &:hover {
-                    background-position: 100% 0;
-                    transition: all .4s ease-in-out;
-                }
-            }
         }
     }
     
@@ -297,12 +236,12 @@
 
 @keyframes myAnim {
     0% {
-        transform: scale(4.5);
+        transform: scale(1.5);
         opacity: 0;
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(1.1);
         opacity: 1;
     }
 }

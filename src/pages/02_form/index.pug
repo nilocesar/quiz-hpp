@@ -9,8 +9,10 @@ block body
 
 		.fundo
 			+image('capa.png', 'capa')
-			.barra.left.delay2
-			+image('title.svg', 'title down delay3')
+			
+			.titleBase.zoomIn.delay2  
+				.title
+					+image('title.svg', '')
 
 		
 			section.sec1
@@ -26,17 +28,12 @@ block body
 						input#email(type="mail")
 						small.alertEmail E-mail invalido.
 				.boxBlack.up.delay5
-					.baseD
-						+image('exclamacao.svg', 'exclamacao')
-						h2 PREPARE-SE PARA RESPONDER AS QUESTÕES NO MENOR TEMPO!
+					
+					h2 PREPARE-SE PARA RESPONDER AS QUESTÕES NO MENOR TEMPO!
 
 					button.btnInit.cadastro
-						p INICIAR
+						+image('iniciarBtn.svg', '')
 					
-				.foguete
-					+image('foguete.png', 'fogueteImg')
-
-			+image('logo.svg', 'logoX up delay6')
 		
 block scripts
 	script(src="script.js")

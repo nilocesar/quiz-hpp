@@ -1,0 +1,24 @@
+mixin quiz6(indice)
+  section.sec6.question(question=indice)
+    .titleBloc.up
+      .number.zoomIn 
+        +image('questao06n.svg', '')
+      .titleD Além do tratamento médico, qual apoio é recomendado para pacientes com HPP?
+    .blocBase
+      .bloc.down.delay2
+        .it(it=1, res=0 )
+          .sel
+          .text Tomar antibióticos regularmente
+        .it(it=2, res=0 )
+          .sel
+          .text Manter uma dieta rica em açúcar
+        .it(it=3, res=0 )
+          .sel
+          .text Evitar qualquer tipo de exercício físico
+        .it(it=4, res=1 )
+          .sel
+          .text Participar de grupos de apoio e acompanhamento psicológico
+
+    .boxBlack.up.delay6
+      button.btnInit.cadastro.confirm
+        +image('enviarBtn.svg', '')

@@ -7,14 +7,14 @@ block body
 	.body.body01
 		.fundo
 			+image('capa.png', 'capa')
-			.barra.left.delay2
-			+image('title.svg', 'title down delay3')
-			.foguete
-				+image('foguete.png', 'fogueteImg')
+			
+			.titleBase.zoomIn.delay2  
+				.title
+					+image('title.svg', '')
 			.baseBtn.zoomIn.delay4  
 				button.init.btnCadastrar
-					p CADASTRAR
-			+image('logo_simples.svg', 'logo_simples zoomIn delay7')
+					+image('cadastraBtn.svg', '')
+
 		
 		
 block scripts

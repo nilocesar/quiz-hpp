@@ -18,6 +18,8 @@ $(document).ready(function () {
     resposta4: 0,
     correta5: 0,
     resposta5: 0,
+    correta6: 0,
+    resposta6: 0,
   };
 
   function formatTime(ms) {
@@ -50,12 +52,12 @@ $(document).ready(function () {
     }
   }
 
-  function reset() {
-    clearInterval(timer);
-    running = false;
-    elapsedTime = 0;
-    $("#cronometro").text("00:00:00");
-  }
+  // function reset() {
+  //   clearInterval(timer);
+  //   running = false;
+  //   elapsedTime = 0;
+  //   $("#cronometro").text("00:00:00");
+  // }
 
   setTimeout(() => {
     start();
@@ -89,6 +91,9 @@ $(document).ready(function () {
       question.attr("res", itIndice);
     });
 
+    $('.capa').addClass('hide');
+    $(".capa1").removeClass("hide");
+
     question.find(".btnInit").on("click", function () {
       questionsObj["correta" + question.attr("question")] = parseInt(
         question.attr("correta")
@@ -98,6 +103,8 @@ $(document).ready(function () {
       );
 
       var qNext = parseInt(question.attr("question")) + 1;
+      $(".capa").addClass("hide");
+      $(".capa" + qNext).removeClass("hide");
 
       if (qNext < total + 1) {
         $(".question").addClass("hide");

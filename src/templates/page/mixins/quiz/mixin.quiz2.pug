@@ -2,26 +2,18 @@ mixin quiz2(indice)
   section.sec2.question(question=indice)
     .titleBloc.up
       .number.zoomIn 
-        span 2
-      .titleD Qual é uma das principais estratégias que podemos citar para garantir o sucesso dos lançamentos de novos produtos?
+        +image('questao02n.svg', '')
+      .titleD Se um dente cair cedo demais, com raiz e tudo, é sempre normal e não precisa se preocupar.
     .blocBase
       .bloc.down.delay2
         .it(it=1, res=0 )
           .sel
-          .text Focar em inovação tecnológica independente do produto ou mercado
-        .it(it=2, res=0 )
+          .text Verdadeiro
+        .it(it=2, res=1 )
           .sel
-          .text Estabelecer preços mais baixos do <br>que os concorrentes
-        .it(it=3, res=1 )
-          .sel
-          .text Compreender as necessidades e dores dos clientes
-        .it(it=4, res=0 )
-          .sel
-          .text Reduzir os custos de marketing <br>ao mínimo
+          .text Falso
 
-    .boxBlack.up.delay3
-      button.btnInit.cadastro
-        p ENVIAR
-      
-    .foguete.foguete2
-      +image('foguete.png', 'fogueteImg')
+    .boxBlack.up.delay6
+      button.btnInit.cadastro.confirm
+        +image('enviarBtn.svg', '')
+

@@ -2,26 +2,19 @@ mixin quiz5(indice)
   section.sec5.question(question=indice)
     .titleBloc.up
       .number.zoomIn 
-        span 5
-      .titleD Em quantos meses, após a chegada no mercado, é definida a trajetória de <br>um novo produto?
+        +image('questao05n.svg', '')
+      .titleD Toda criança com HPP vai ter os mesmos sintomas.
     .blocBase
       .bloc.down.delay2
-        .it(it=1, res=1 )
+        .it(it=1, res=0 )
           .sel
-          .text 6 meses
-        .it(it=2, res=0 )
+          .text Verdadeiro
+        .it(it=2, res=1 )
           .sel
-          .text 9 meses
-        .it(it=3, res=0 )
-          .sel
-          .text 12 meses
-        .it(it=4, res=0 )
-          .sel
-          .text 15 meses
+          .text Falso
+        
 
-    .boxBlack.up.delay3
-      button.btnInit.cadastro.finalizar
-        p FINALIZAR
+    .boxBlack.up.delay6
+      button.btnInit.cadastro.confirm
+        +image('enviarBtn.svg', '')
       
-    .foguete.foguete2
-      +image('foguete.png', 'fogueteImg')

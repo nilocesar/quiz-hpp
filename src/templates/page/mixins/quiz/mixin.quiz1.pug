@@ -2,26 +2,24 @@ mixin quiz1(indice)
   section.sec1.question(question=indice)
     .titleBloc.up.delay4
       .number.zoomIn.delay4 
-        span 1
-      .titleD Quantos lançamentos de novos produtos e novas indicações estão previstos pela AstraZeneca em 2025?
+        +image('questao01n.svg', '')
+      .titleD Qual dos sinais abaixo pode indicar suspeita de Hipofosfatasia em uma criança?
     .blocBase
       .bloc.down.delay5
         .it(it=1, res=0 )
           .sel
-          .text 10 novos produtos e 4 novas indicações
+          .text Dente de leite caiu com raiz intacta antes dos 4 anos
         .it(it=2, res=0 )
           .sel
-          .text 9 novos produtos e 2 novas indicações
-        .it(it=3, res=1 )
+          .text Dor ou cansaço nos braços e pernas sem motivo aparente
+        .it(it=3, res=0 )
           .sel
-          .text 4 novos produtos e 7 novas indicações
-        .it(it=4, res=0 )
+          .text Crescimento abaixo da média
+        .it(it=4, res=1 )
           .sel
-          .text 7 novos produtos e 11 novas indicações
+          .text Todas as anteriores
 
     .boxBlack.up.delay6
       button.btnInit.cadastro.confirm
-        p ENVIAR
-      
-    .foguete
-      +image('foguete.png', 'fogueteImg')
+        +image('enviarBtn.svg', '')
+
